@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
-py_dev=("pylint" "flake8" "bandit" "mypy" "black" "isort")
+
+# Load dev dependencies to python virtualenv
+py_dev=(
+    "pylint" 
+    "flake8" 
+    "bandit" 
+    "mypy" 
+    "black" 
+    "isort" 
+    "pytest" 
+    "ipykernel"
+)
+
 if [ "$PIPENV_ACTIVE" ]; then
     for i in "${py_dev[@]}"; do
         pipenv install "$i" --dev --skip-lock
