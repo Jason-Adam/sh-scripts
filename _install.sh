@@ -7,7 +7,7 @@ mkdir -p ~/bin;
 
 # Symlink all non install shell scripts to bin folder
 # Assumes you've cloned repo into ~/code
-for f in $(ls | grep '^[^\_]*.sh'); do
+for f in $(ls ~/code/sh-scripts | grep '^[^\_]*.sh'); do
     fbname=$(basename "$f" | cut -d. -f1);
     ln -s -f ~/code/sh-scripts/"$f" ~/bin/"$fbname";
 done;
