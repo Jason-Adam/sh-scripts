@@ -7,4 +7,4 @@ load-env() {
     set +o allexport;
 }
 
-load-env;
+load-env $1;
