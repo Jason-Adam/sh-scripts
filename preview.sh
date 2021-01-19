@@ -5,4 +5,4 @@ preview() {
     open "$1" -a "Preview";
 }
 
-preview;
+preview $1;
