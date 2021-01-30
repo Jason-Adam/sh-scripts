@@ -9,7 +9,6 @@ py_dev=(
     "black" 
     "isort" 
     "pytest" 
-    "ipykernel"
 )
 
 py-deps() {
