@@ -2,13 +2,14 @@
 
 # Load dev dependencies to python virtualenv
 py_dev=(
-    "pylint" 
-    "flake8" 
-    "bandit" 
-    "mypy" 
-    "black" 
-    "isort" 
-    "pytest" 
+    "python-language-server"
+    "pylint"
+    "flake8"
+    "bandit"
+    "mypy"
+    "black"
+    "isort"
+    "pytest"
 )
 
 py-deps() {
@@ -18,7 +19,7 @@ py-deps() {
         done;
     elif [ "$POETRY_ACTIVE" ]; then
         for i in "${py_dev[@]}"; do
-            poetry add "$i" --dev 
+            poetry add "$i" --dev
         done;
     else
         echo "please activate a virtualenv and rerun"
