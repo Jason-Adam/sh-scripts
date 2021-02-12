@@ -24,4 +24,4 @@ else
     echo "There are no branches to cleanup."
 fi
 
-rm branchesToDelete remots locals
+rm branchesToDelete remotes locals
