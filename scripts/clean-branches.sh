@@ -15,7 +15,7 @@ grep -xv -f remotes <locals >branchesToDelete
 if [ "$(wc -w <branchesToDelete)" -gt 0 ]; then
     echo "$(wc -l <branchesToDelete) branches without matching remote found, outputting to editor"
     echo "Waiting for editor to close"
-    vim branchesToDelete -w
+    vim branchesToDelete
 
     while read -r line; do
         git branch -D "$line"
