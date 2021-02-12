@@ -1,8 +1,2 @@
-#!/usr/bin/env bash
-
-# Open files in Preview app on mac - useful for images and PDFs
-preview() {
-    open "$1" -a "Preview";
-}
-
-preview $1;
+#!/bin/sh
+open "$1" -a "Preview"
