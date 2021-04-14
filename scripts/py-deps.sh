@@ -22,6 +22,11 @@ elif [ "$POETRY_ACTIVE" ]; then
     for dep in ${py_dev}; do
         poetry add "$dep" --dev
     done
+elif [ "$VIRTUAL_ENV" ]; then
+    for dep in ${py_dev}; do
+        pip install "$dep"
+    done
+    pip freeze >>requirements_dev.txt
 else
     echo "please activate a virtualenv and rerun"
 fi
