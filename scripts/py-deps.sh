@@ -4,7 +4,6 @@ set -e
 
 # Load dev dependencies to python virtualenv
 py_dev="
-    python-language-server
     pylint
     flake8
     bandit
