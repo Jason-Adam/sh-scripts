@@ -7,7 +7,6 @@ py_dev="
     pylint
     flake8
     bandit
-    mypy
     black
     isort
     pytest
